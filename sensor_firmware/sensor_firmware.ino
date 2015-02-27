@@ -6,7 +6,6 @@
 
 #include "TimerOne.h"
 
-
 int counter = 0;
 int average = 0;
 
@@ -21,14 +20,16 @@ void setup() {
 }
 
 void loop() {
-    // We don't need to do anything for now
+    // We don't actually need anything in here since all of our 
+    // logic is in the Interrupt Service Routine (ISR)
 }
 
 /* Here is the routine that is run when the timer interrupt goes off */
 void interrupt_loop(){
     int sensorValue = analogRead(A0);
 
-    // Prints out every 5000 samples
+    // prints out an average value after 5000 samples
+    // TODO: Implement our actual filter here
     if(counter == 5000){
         Serial.println(sensorValue);
         counter = 0;
