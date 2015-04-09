@@ -1,0 +1,8 @@
+Document: Passive Acoustic Anemometer Algorithm Update
+Date: 4/8/15
+By: Andy Pham
+
+1) Figure out the microphone analog output mean using teensy
+2) Change the mean 508 into the new mean of 1)
+3) Using alpha = 0.0001 instead alpha = 0.0002
+3) Using sqrt(output)*1.283 + 0.9619 when prints out wind speed
